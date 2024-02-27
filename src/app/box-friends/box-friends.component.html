@@ -1,0 +1,77 @@
+<div class="login-box">
+  <app-box-header></app-box-header>
+  <div class="box-status">
+    <div class="profile-picture"></div>
+    <div class="user-info">
+      <label style="font-size: 15px; margin-right: 10px">
+        <strong>
+          {{ username.toLocaleUpperCase() }}
+        </strong></label
+      >
+      <select>
+        <option>Online</option>
+        <option>Away</option>
+        <option>Busy</option>
+        <option>Offline</option>
+      </select>
+    </div>
+    <div class="personal-msj">
+      <input placeholder="<Personaliza tu mensaje>" />
+    </div>
+  </div>
+  <div class="box-users">
+    <div class="box-users-head">
+      <div class="icon">
+        <img
+          src="/assets/icons/icon-person.webp"
+          style="height: 70px"
+          alt="icon-msn"
+        />
+      </div>
+      <div class="alert-and-add">
+        <div class="alert">
+          <img src="/assets/icons/info.webp" style="height: 14px" />Click here to learn
+          about to Customer Experience Improvement Program.
+        </div>
+        <div class="add">
+          <img src="/assets/icons/user.webp" style="height: 14px" />Agregar un contacto
+        </div>
+      </div>
+    </div>
+    <div class="box-users-content">
+      <ul>
+        <li class="user" (click)="showBoxMSJ(); hiddenBoxFriendsMobile(); $event.stopPropagation();">
+          <img [src]="statusIcons[status[1]]" alt="Icon" />
+          myChatBot <span style="color: grey">{{ status[1] }}</span>
+        </li>
+        <li class="user">
+          <img [src]="statusIcons[status[2]]" alt="Icon" />
+          Daniel Rios <span style="color: grey">{{ status[2] }}</span>
+        </li>
+        <li class="user">
+          <img [src]="statusIcons[status[0]]" alt="Icon" />
+          Miško Hevery <span style="color: grey">{{ status[0] }}</span>
+        </li>
+        <li class="user">
+          <img [src]="statusIcons[status[0]]" alt="Icon" />
+          Larry Page <span style="color: grey">{{ status[0] }}</span>
+        </li>
+        <li class="user">
+          <img [src]="statusIcons[status[0]]" alt="Icon" />
+          Linus Torvalds <span style="color: grey">{{ status[0] }}</span>
+        </li>
+        <li class="user">
+          <img [src]="statusIcons[status[0]]" alt="Icon" />
+          Bill Gates <span style="color: grey">{{ status[0] }}</span>
+        </li>
+      </ul>
+      <div class="img-marca">
+        <img src="/assets/wallpapers/msn-mark.webp" />
+      </div>
+      <div class="search">
+        <input placeholder="Buscar usuario..." />
+        <span style="font-size: 12px; margin-left: 5%">Buscar</span>
+      </div>
+    </div>
+  </div>
+</div>

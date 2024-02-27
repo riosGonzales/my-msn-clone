@@ -1,0 +1,8 @@
+<div class="container">
+    <app-box-friends class="box-friends" *ngIf="boxFriends"></app-box-friends>
+    <app-box-messages 
+      [class.buzz]="stateService.isBuzzing$ | async" 
+      class="box-messages" *ngIf="boxMSJ"
+    ></app-box-messages>
+  </div>
+  

@@ -1,0 +1,28 @@
+<div class="toolbar">
+  <div class="toolbar-start">
+    <span class="logo-windows"></span>
+    <span class="start"><strong>Inicio</strong></span>
+  </div>
+  <div class="toolbar-content">
+    <div class="software-info" (click)="mostrarLogin()">
+        <span class="icon-msn">
+            <img src="/assets/msn-users.webp" alt="Icono MSN">
+        </span>
+        <span>My MSN Messenger Clone</span>
+    </div>
+    <div class="languaje">
+      <span>ES</span>
+    </div>
+  </div>
+  <div class="toolbar-end">
+    <div class="icons">
+      <i class="fab fa-windows"></i>
+      <i class="fas fa-folder"></i>
+      <i class="fas fa-search"></i>
+      <i class="fas fa-desktop"></i>
+    </div>
+    <div class="hour">
+      {{ currentHour }}
+    </div>
+  </div>
+</div>

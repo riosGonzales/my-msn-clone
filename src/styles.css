@@ -1,8 +1,218 @@
+
 .body {
-    background-image: url('/assets/wallpaperbetter.com_1920x1080.jpg');
+    background-image: url('/assets/wallpapers/wp_windows.webp');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 90vh;
+    height: 100vh;
+    overflow: hidden;
   }
   
+.container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+}
+
+.maximized {
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    max-height: none;
+    display: block;
+}
+
+.login-box {
+	background-color: #fff;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    border-width: 4px;
+    border-color: #0020bf;
+    border-style: solid;
+    font-family: 'Tahoma', sans-serif;
+    overflow: hidden;
+}
+
+/*cabecera del box */
+.box-header {
+    background: linear-gradient(#0661ec, #044cd4, #0661ec);
+    color: azure;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+}
+
+.icono-msn {
+    width: 20px;
+    height: auto;
+    margin-right: 10px; 
+}
+
+.window-controls {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.control {
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    width: 20px;
+    height: 20px;
+    background-color: transparent; 
+    margin-left: 4px;
+    border-style: solid;
+    border-color: white;
+    border-width: 1px;
+    cursor: pointer;
+}
+
+.control:last-child {
+    background-color: red; 
+}
+
+/*contenido del box */
+.box-content {
+    background: linear-gradient(#f6fcfc, #dce4f3);
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-picture {
+    width: 100px;
+    height: 100px;
+    border-radius: 20%;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+    background-size: cover;
+    background-position: center;
+    background-image: url('/assets/user.png'); 
+}
+
+.form {
+    margin-top: 20px;
+}
+
+.form label {
+    display: block; 
+    margin-bottom: 5px;
+    font-size: 12px;  
+    color: #040434;
+}
+
+.form input {
+    width: 100%;
+    margin-bottom: 10px; 
+}
+
+.form input[type="password"] {
+    background-color: transparent;
+}
+
+.form select {
+    background-color: transparent;
+    border: 1px solid transparent;
+}
+
+.checkboxes {
+    margin-top: 20px;
+    align-self: flex-start; 
+}
+
+.checkboxes input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 16px;
+    height: 16px;
+    border: 1px solid rgb(99, 76, 175); /* Color del borde del checkbox */
+    outline: none;
+    cursor: pointer;
+}
+
+.checkboxes input[type="checkbox"]::before {
+    content: '\2713'; /* Caracter Unicode del checkmark ✓ */
+    display: block;
+    width: 16px;
+    height: 16px;
+    line-height: 16px;
+    text-align: center;
+    color: #4CAF50; /* Color del checkmark */
+    font-size: 14px;
+    font-weight: bold;
+    visibility: hidden;
+}
+
+.checkboxes input[type="checkbox"]:checked::before {
+    visibility: visible;
+}
+
+.box-content-end {
+    margin-top: 40px;
+    align-self: flex-start; 
+}
+
+.box-content-end label {
+    font-size: 12px;  
+    color: #0925b0;
+    text-decoration: underline;
+}
+
+.buttons {
+align-self: center;
+margin-top: 20px;
+}
+
+.loader {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 15px;
+    margin-left: 26px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    animation: l5 1s infinite linear alternate;
+  }
+
+
+  
+  @keyframes l5 {
+      0%  {box-shadow: 20px 0 #000, -20px 0 #0002;background: #000 }
+      33% {box-shadow: 20px 0 #000, -20px 0 #0002;background: #0002}
+      66% {box-shadow: 20px 0 #0002,-20px 0 #000; background: #0002}
+      100%{box-shadow: 20px 0 #0002,-20px 0 #000; background: #000 }
+  }
+
+.buttons button {
+    padding: 7px;
+    color: #0925b0;
+    background: linear-gradient(#f6fcfc, #dce4f3);
+    border-width: 1px;
+    border-style: solid;
+    box-shadow: inset 0 -2px 0 yellowgreen, inset 0 1px 0 yellowgreen; 
+    cursor: pointer;
+}
+
+.buttons button:hover {
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5); /* Ajusta la sombra interna en el estado de hover */
+}
+
+/*footer del box */
+
+.box-footer {
+    padding: 3px;
+    background-color: #dce4f3;
+}
+
+.box-footer p {
+    font-size: 12px; 
+    margin-left: 5px;
+}
+
+li {
+    list-style-type: none;
+}

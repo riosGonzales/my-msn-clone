@@ -1,0 +1,106 @@
+.toolbar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 8% 80% 15%;
+    grid-template-rows: 100%;
+    gap: 0; 
+    color: white; 
+    z-index: 100;
+    height: 35px; 
+    font-family: 'Tahoma', sans-serif;
+    background: linear-gradient(#387fde, #2c68dc, #387fde);
+}
+  /*Primera parte del toolbar */
+.toolbar-start {
+    display: flex;
+    align-items: center;
+    background: linear-gradient(#6fa86e, #267c26, #6fa86e);
+    padding: 10px;
+    border-radius: 0 10px 10px 0; 
+cursor: pointer;
+}
+
+
+.logo-windows {
+    width: 24px; 
+    height: 24px; 
+    display: inline-block;
+    background: url('/assets/windows-logo.png') no-repeat center center; 
+    background-size: cover; 
+    margin-right: 10px; 
+}
+
+.start {
+    font-style: italic;
+    font-size: 18px; 
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8); 
+}
+    /*Segunda parte del toolbar */
+
+    .toolbar-content {
+        display: grid;
+        grid-template-columns: 18% 1fr 1%;
+        background: linear-gradient(#387fde, #2c68dc, #387fde);
+        position: relative;
+    }
+    
+    .software-info {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        font-size: 12px;
+        background: linear-gradient(#3c84f4, #4484f4, #3c84f4);
+        margin-left: 10px;
+        box-shadow: inset 0 0 6px rgba(132, 204, 244, 0.5), inset 0 0 10px rgba(132, 204, 244, 0.2);
+    }
+    
+    .icon-msn img {
+        width: 24px;
+        height: 24px; 
+    }
+
+    .software-info span {
+        margin-left: 10px;
+    }
+    
+    .languaje {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding: 10px;
+        border-radius: 0 10px 10px 0;
+    }
+    
+    .languaje span {
+        margin-left: 10px;
+        font-size: 12px;
+    }
+    /*Tercera parte del toolbar */
+
+.toolbar-end {
+    background: linear-gradient(#0e94e9, #148ce4, #0e94e9);
+    display: grid;
+    grid-template-columns: 60% 40%;
+    align-items: center;
+    padding: 10px;
+    box-shadow: inset 0 0 6px rgba(132, 204, 244, 0.5), inset 0 0 10px rgba(132, 204, 244, 0.2);
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+}
+
+.icons i {
+    margin-left: 10px;
+}
+
+.hour {
+    font-family: 'Tahoma', sans-serif;
+    font-size: 12px;
+}
+

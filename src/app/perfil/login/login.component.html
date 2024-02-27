@@ -1,7 +1,53 @@
 <div class="container">
-  <div class="modal">
-    <div class="modal-header"></div>
-    <div class="modal-content"></div>
-    <div class="modal-footer"></div>
+  <div class="login-box">
+    <app-box-header></app-box-header>
+    <div class="box-content">
+      <div class="profile-picture"></div>
+      <div class="form">
+        <label>Dirección de correo electrónico: </label>
+        <input
+          value="cualquier-email@gmail.com"
+          type="email"
+          placeholder="Ingresa cualquier correo..."
+          [(ngModel)]="email"
+        />
+        <label>Contraseña: </label>
+        <input
+          type="password"
+          [(ngModel)]="password"
+          placeholder="Ingresa cualquier contraseña...."
+        />
+        <span style="font-size: 12px; color: #040434">Estado: </span>
+        <select>
+          <option>Online</option>
+          <option>Away</option>
+          <option>Busy</option>
+          <option>Offline</option>
+        </select>
+      </div>
+      <div class="checkboxes">
+        <input type="checkbox" />
+        <span style="font-size: 12px; color: #040434">Recuerdame</span>
+        <br />
+        <input type="checkbox" />
+        <span style="font-size: 12px; color: #040434"
+          >Recordar contraseña
+        </span>
+      </div>
+      <div class="buttons">
+        <div *ngIf="loading" class="loader"></div>
+        <button (click)="iniciarSesion()">
+          <strong>{{ txtButton }}</strong>
+        </button>
+      </div>
+      <div class="box-content-end">
+        <label>¿Olvidaste tu contraseña?</label>
+        <br />
+        <label>No necesitas registrarte para ingresar</label>
+      </div>
+    </div>
+    <div class="box-footer">
+      <p>©️ Creado por Daniel Rios como tributo a MSN Messenger</p>
+    </div>
   </div>
 </div>

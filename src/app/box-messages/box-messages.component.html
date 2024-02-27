@@ -1,0 +1,74 @@
+<div class="login-box" *ngIf="boxMSJ">
+<app-box-header></app-box-header>
+  <div class="box-msj">
+    <div class="box-msj-head">
+      <div class="icons">
+        <img src="/assets/icons/icon-dialog.webp" />
+        <span>Invite</span>
+      </div>
+      <div class="icons">
+        <img src="/assets/icons/icon-pictures.webp" />
+        <span>Send Files</span>
+      </div>
+      <div class="icons">
+        <img src="/assets/icons/icon-cam.webp" />
+        <span>Webcam</span>
+      </div>
+      <div class="icons">
+        <img src="/assets/icons/icon-mic.webp" />
+        <span>Audio</span>
+      </div>
+      <div class="icons">
+        <img src="/assets/icons/icon-music.webp" />
+        <span>Activities</span>
+      </div>
+      <div class="icons">
+        <img src="/assets/icons/icon-games.webp" />
+        <span>Games</span>
+      </div>
+    </div>
+    <div class="box-msj-content">
+      <div class="box-conversation-container">
+        <div class="box-conversation">
+          <div *ngFor="let message of conversationMessages" [innerHTML]="message.username + ' says:<br>' + message.message"></div>
+        </div>
+        <div class="box-input">
+          <div class="input-part">
+            <div class="group-emoji">
+              <div class="emoji">
+                <img src="/assets/emojis/msn-open-emoji.webp" />
+                <span>▿</span>
+              </div>
+              <div class="emoji">
+                <img src="/assets/emojis/wink-open-emoji.webp" />
+                <span>Winks ▿</span>
+              </div>
+              <div class="emoji" style="cursor: pointer;" (click)="buzzing()">
+                <span>((</span>
+                <img src="/assets/emojis/buzz-emoji.webp" />
+                <span>))</span>
+              </div>
+            </div>
+          </div>
+          <div class="chat-input">
+            <textarea [(ngModel)]="messageText" (keydown.enter)="preventEnter($event)"></textarea>
+            <button (click)="userSendMessage()"><strong>Send</strong></button>
+          </div>
+          <div class="input-part"></div>
+        </div>
+      </div>
+      <div class="box-pfps">
+        <div class="box-start">
+          <div class="start">
+            <img src="/assets/pfp/dog.webp" />
+          </div>
+        </div>
+        <div class="box-end">
+          <div class="end">
+            <img src="/assets/pfp/duck.webp" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
